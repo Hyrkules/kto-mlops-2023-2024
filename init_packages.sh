@@ -8,3 +8,5 @@ python -m build --sdist --wheel
 cd dist
 cp *.whl ../../../cats_dogs_other/train/packages
 cd ../../../
+cp *.whl ../../../cats_dogs_other/api/packages
+cd ../../../
