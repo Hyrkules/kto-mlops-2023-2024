@@ -23,6 +23,8 @@ jobs:
           # For tests purposes, we copy an existing .h5 file in the folder api/resources
           # We will delete it just after the tests
           cp ./cats_dogs_other/train/steps/tests/test/input/model/final_model.h5 ./cats_dogs_other/api/resources/model.h5 
+          export epochs="${{vars.epochs}}"
+          export epochs="${{vars.batch_size}}"
           python -m unittest
           rm ./cats_dogs_other/api/resources/model.h5
       - name: Install mlflow
